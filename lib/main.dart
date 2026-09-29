@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         useMaterial3: true,
       ),
-      home: const WeightScreen(),
+      home: const MainScreen(),
     );
   }
 }
