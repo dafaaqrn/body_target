@@ -20,6 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     _HomePlaceholder(),
     WeightScreen(),
     ExerciseScreen(),
+    SettingsScreen(),
   ];
 
   @override
@@ -31,8 +32,12 @@ class _MainScreenState extends State<MainScreen> {
         index: _currentIndex,
         children: _screens,
       ),
-      bottomNavigationBar: BottomNavigationBar(
+            bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.grey,
         onTap: (index) {
           setState(() {
             _currentIndex = index;

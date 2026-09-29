@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'screens/main_screen.dart';
+import 'services/notification_service.dart';
 
 void main() async {
   // Wajib dipanggil sebelum pakai plugin native (seperti Firebase)
@@ -11,6 +12,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await NotificationService().init();
 
   runApp(const MyApp());
 }
@@ -27,20 +30,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MainScreen(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Body Target')),
-      body: const Center(
-        child: Text('Firebase berhasil terhubung! 🎉'),
-      ),
     );
   }
 }
