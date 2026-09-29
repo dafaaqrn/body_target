@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'weight_screen.dart';
 import 'exercise_screen.dart';
-
+import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
