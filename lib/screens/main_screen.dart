@@ -46,7 +46,10 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.monitor_weight),
             label: 'Berat Badan',
           ),
-          
+          BottomNavigationBarItem(
+            icon: Icon(Icons.directions_run),
+            label: 'Olahraga',
+          ),
         ],
       ),
     );
