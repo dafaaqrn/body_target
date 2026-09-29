@@ -51,6 +51,10 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.directions_run),
             label: 'Olahraga',
           ),
+                    BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Pengingat',
+          ),
         ],
       ),
     );
