@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'weight_screen.dart';
+import 'exercise_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -17,6 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _screens = const [
     _HomePlaceholder(),
     WeightScreen(),
+    ExerciseScreen(),
   ];
 
   @override
@@ -44,6 +46,7 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.monitor_weight),
             label: 'Berat Badan',
           ),
+          
         ],
       ),
     );
