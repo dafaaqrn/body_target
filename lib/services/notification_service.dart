@@ -8,6 +8,7 @@ class NotificationService {
 
   Future<void> init() async {
     tz_data.initializeTimeZones();
+    tz.setLocalLocation(tz.getLocation('Asia/Jakarta')); // set zona waktu WIB
 
     const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
     const initSettings = InitializationSettings(android: androidSettings);

@@ -27,14 +27,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
-  Future<void> _saveReminder() async {
-    await _notificationService.scheduleDailyNotification(
-      id: _exerciseReminderId,
-      title: 'Waktunya Olahraga! 🏃',
-      body: 'Ayo gerak sedikit hari ini, konsisten itu kuncinya.',
-      hour: _exerciseTime.hour,
-      minute: _exerciseTime.minute,
-    );
+    Future<void> _saveReminder() async {
+
+    try {
+      await _notificationService.scheduleDailyNotification(
+        id: _exerciseReminderId,
+        title: 'Waktunya Olahraga! 🏃',
+        body: 'Ayo gerak sedikit hari ini, konsisten itu kuncinya.',
+        hour: _exerciseTime.hour,
+        minute: _exerciseTime.minute,
+      );
+    } catch (e) {
+      print('ERROR saat menjadwalkan notifikasi: $e'); // sementara, untuk debug
+    }
 
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
