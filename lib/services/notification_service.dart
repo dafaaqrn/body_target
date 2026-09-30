@@ -11,7 +11,7 @@ class NotificationService {
     tz_data.initializeTimeZones();
 
     // Ambil zona waktu HP secara otomatis, misal "Asia/Jakarta", "Asia/Makassar", dst.
-    final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
+    final String currentTimeZone = (await FlutterTimezone.getLocalTimezone()).identifier;
     tz.setLocalLocation(tz.getLocation(currentTimeZone));
 
     const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
